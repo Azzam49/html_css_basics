@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .container{
+            width:80%;
+            margin:auto;
+            margin-top:20px;
+        }
+        div{
+            border:1px solid silver;
+        }
+        div p{
+            padding:10px;
+        }
+
+        nav ul li{
+            display:inline;
+            margin:10px;
+        }
+        nav{
+            background-color:silver;
+            width:80%;
+            margin:auto;
+            height:40px;
+            position:fixed;
+            display:none;
+        }
+
+        .MasterBox{
+            border:2px solid red;
+            margin:20px;
+            padding:10px;
+            height:400px;
+
+        }
+
+        .box1{
+             display:none;
+        }
+
+       .box2{
+            width:180px;
+            height:150px;
+            overflow:scroll;
+       }
+
+       .fixed1{
+            position:fixed;
+              z-index:2;
+              top:300px;
+       }
+
+        .sticky1{
+            position:sticky;
+            background-color:lightblue;
+            z-index:1;
+        }
+
+
+
+        body{
+            height:3000px;
+        }
+
+
+        .newBox{
+
+
+            border:1px solid;
+            float:left;
+            width:33.33%;
+            padding : 5px;
+               box-sizing:border-box;
+        }
+
+        .clearfix{
+            clear:both;
+        }
+
+
+        .pseudo1 p::first-line{
+            color:gold;
+        }
+         .pseudo1 p::first-letter{
+            color:red;
+        }
+
+
+
+
+         .pseudo2 p::before{
+            content: "YOO!";
+            display: block;
+            background-color:lightblue;
+            color: gold;
+            text-align: center;
+            height:30px;
+            margin-bottom:15px;
+        }
+        .pseudo2 p::after{
+            content: "BOO!";
+            display: block;
+            background-color:pink;
+            color: green;
+            text-align: center;
+            height:30px;
+            margin-top:15px;
+        }
+
+        ::selection{
+            color:gold;
+            background-color: ;
+        }
+
+        .myList li:nth-child(even){
+            background-color: gold;
+        }
+         .myList li:nth-child(odd){
+            background-color: blue;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <!--
+    Positions(static,relative,fixed,absolute,sticky)
+
+
+    (static)
+    default
+
+    (relative)
+     you can use (top,bottom,right,left), if not used then nothing will happen,
+     when you use them other elements will not be affected .
+
+    (absolute)
+     this will position the element directly to the html page itself,so the elment
+     using (top,bottom,right,left) to be placed anywhere you want.
+
+    (fixed)
+    this will make the element stays at the same place even if the page is scrolled.
+    using (top,bottom,right,left) to position the element.
+
+    (sticky)
+    this will make the element relative positioned , but if scrolling down it will
+    act as fixed.
+
+    ------
+    z-index css attribute controls the come-front go-back layouts for the
+    element, giving it numeric value, the element with highest value comes-front.
+    ------
+    overflow controls the behave of an element,if its overflow its container.
+    scroll:add scroll bar,visible: default,hidden: hides overflowed content.
+    overflow-x for horizontal, overflow-y for vertical
+    ------
+    box-sizing: border-box; , defines how width+height of element is
+    calculated. border-box calculates the padding+borders with the total
+    width&height.
+    ------
+    clear:both; , this is used after floating elements, new elements will
+    be placed normally, if not used clear:both new elements will look
+    to fill the area that floated elements had left.
+    ------
+    Pseudo-classes are used to define special state of an element,we can
+    then style element if got hovered,visited etc..
+    e.g.: a:hover
+    ------
+    Pseudo-elements are used to style specified parts of an element,
+    insert content before or after the content of an element.
+
+    ::before adds content before the element,
+    ::after adds content after the element,
+    ::selection styles the element when its selected by the user.
+    ------
+    -->
+    <main class="container">
+
+        <header>
+            <nav>
+                  <ul>
+                 <li><a href="#">Home</a></li>
+                 <li><a href="#">Account</a></li>
+                 <li><a href="#">About</a></li>
+                </ul>
+            </nav>
+        </header>
+
+         <div class="box1">
+            <p>
+                An element with position: static; is not positioned in any special way; it is always positioned according to the normal flow of the page:
+            </p>
+        </div>
+
+        <div class="fixed1">
+            <p>we are fixed content!</p>
+        </div>
+
+          <div class="sticky1">
+            <p>we are sticky content!</p>
+        </div>
+
+        <div class="MasterBox">
+            <div class="box2">
+                <p>
+                    Setting the top, right, bottom, and left properties of a relatively-positioned element will cause it to be adjusted away from its normal position. Other content will not be adjusted to fit into any gap left by the element.
+                </p>
+            </div>
+        </div>
+
+
+
+
+            <div class="newBox">
+                <p>Hello there here box 1</p>
+            </div>
+            <div class="newBox">
+                <p>Hello there here box 2</p>
+            </div>
+            <div class="newBox">
+                <p>Hello there here box 3</p>
+            </div>
+
+            <div class="clearfix"></div>
+
+
+        <div  class="pseudo1" style="border:2px solid; margin-top:5px;">
+            <p>
+                Setting the top, right, bottom, and left properties of a relatively-positioned element will cause it to be adjusted away from its normal position. Other content will not be adjusted to fit into any gap left by the element.
+            </p>
+        </div>
+
+         <div  class="pseudo2" style="border:2px solid; margin-top:5px;">
+            <p>
+                Setting the top, right, bottom, and left properties of a relatively-positioned element will cause it to be adjusted away from its normal position. Other content will not be adjusted to fit into any gap left by the element.
+            </p>
+        </div>
+
+        <div class="myList" style="margin-top:10px;">
+            <ul>
+                <li> My list</li>
+                 <li> My list</li>
+                 <li> My list</li>
+                 <li> My list</li>
+                 <li> My list</li>
+                 <li> My list</li>
+                 <li> My list</li>
+                 <li> My list</li>
+                <li> My list</li>
+
+            </ul>
+        </div>
+    </main>
+
+</body>
+
+</html>

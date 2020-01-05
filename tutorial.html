@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Testing Page</title>
+    <meta charset="UTF-8">
+
+    <!-- <link> links to files-->
+    <link rel="stylesheet" type="text/css" href="main.css">
+
+    <!-- CSS Styling within html document-->
+    <style>
+
+        table{
+            width:80%;
+
+        }
+
+        table,th,td{
+            border:1px solid black;
+            border-collapse:collapse;
+        }
+
+        th,td{
+            text-align:center;
+            padding:5px;
+        }
+
+
+        .intro{
+            text-decoration:underline;
+        }
+        .title{
+            color:red;
+        }
+        #learning{
+            background-color:gray;
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+    <h1>Welcome!</h1>
+    <p>this is a testing page</p>
+
+    <!-- creates bookmark to the element having address id -->
+    <a href="#address">Go to address information</a>
+    <hr>
+
+    <!-- <br> inserts single line break-->
+    <p>This is <br>my content</p>
+    <hr>
+
+
+    <!-- <pre> preserves both spaces
+    and line breaks,font usually be Courier-->
+    <!-- <mark> highlights the text-->
+    <pre>
+     <q>Hello</q>
+     I am <mark>Azzam</mark>.
+    </pre>
+    <hr>
+
+    <!-- EXTRA TEXT FORMATTING
+    <b> bold text
+    <em> emphasized text
+    <strong> important text
+    <mark> highlights text
+    <del> strikeout text
+    <ins> underlines text
+    <small> small text
+    <i> italic text
+    -->
+
+    <!-- <sub> subscripts the text -->
+    <!-- <sup> superscripts the text -->
+    <!-- <del> strikeout the text-->
+    <p><sub>Testing</sub> <del>the</del> <sup>test</sup></p>
+    <hr>
+
+    <!-- dir attribute changes direction rtl/ltr-->
+    <p dir="rtl">Right to left test</p>
+    <hr>
+
+    <!-- <target> links to a new tab-->
+    <!-- <title> adds tooltip-->
+    <a href="www.google.com" target="_blank" title="google">Google here!</a>
+
+    <!-- <address> contact information,have line break and italic-->
+    <address id="address">
+    written by azzam.<br>
+    at 2019.
+    </address>
+    <hr>
+
+    <!-- creates an image -->
+    <img src="erp.PNG" alt="testing picture" style="width:100px;height:100px;">
+    <hr>
+
+
+    <!-- <table> creates table-->
+    <!-- <tr> table row -->
+    <!-- <th> table heading -->
+    <!-- <td> table data -->
+    <!-- <caption> title for the table -->
+    <!-- colspan merges columns,rowspan mergres rows -->
+    <h3>Table:</h3>
+    <table>
+        <caption style="text-align:left;padding-bottom:5px;">Testing Table</caption>
+        <tr>
+            <th >Name</th>
+            <th colspan="2">Country</th>
+        </tr>
+        <tr>
+            <td>Ali</td>
+            <td>Sudan</td>
+            <td>Africa</td>
+        </tr>
+        <tr>
+            <td >Taha</td>
+            <td >Cairo</td>
+            <td >Egypt</td>
+        </tr>
+        <tr>
+            <td colspan="3">test</td>
+        </tr>
+        <tr>
+            <td colspan="3">test2</td>
+        </tr>
+    </table>
+    <br>
+    <hr>
+
+
+    <!-- ordered list, types(A,a,1,I,i)-->
+    <!-- CSS display:inline; to display lists inline -->
+    <ol  type="A">
+        <li>First</li>
+        <li>Second</li>
+        <li>Third</li>
+    </ol>
+
+    <!-- unordered list, list-style-type (circle,square,disc,none)-->
+    <ul style="list-style-type:square;">
+        <li>Python</li>
+        <li>C#</li>
+        <li>GO</li>
+    </ul>
+
+    <!-- Nested List -->
+    <ul>
+        <li>Old Languages
+            <ul>
+                <li>Scala</li>
+                <li>Fortan</li>
+                <li>C</li>
+            </ul>
+        </li>
+        <li>New Languages</li>
+    </ul>
+
+    <!-- description list -->
+    <dl>
+        <dt>Python</dt>
+        <dd>Cool syntax</dd>
+        <dt>C#</dt>
+        <dd>all OOP</dd>
+    </dl>
+
+    <hr>
+
+    <!-- Block & inLine
+    block elements starts in newline and takes full width available
+    inline elements doesn't start in newline ,takes the necessary width only-->
+    <!-- div is container for other html elements -->
+    <!-- span is container for some text -->
+    <div style="color:blue;background-color:gray;">
+        <p>Hello there!<br>This is <span style="color:red;">testing</span> area!</p>
+    </div>
+
+    <hr>
+
+
+    <!-- class/id attributes used by CSS&JS to perform tasks
+    id is higher level than classes,used to define one unique element,uses #
+    class can define more than one element,element can have many classes,uses .-->
+    <h3>Styling by Classes and Id's</h3>
+    <p class="intro title">Hello there, this is a testing area on HTML</p>
+    <p id="learning">learning HTML then CSS then JS</p>
+    <p>Backend is Python Django framework</p>
+
+    <hr>
+
+
+
+    <h1>Forms:</h1>
+    <form method="post">
+        <fieldset>
+            <legend>Test Form</legend>
+
+            Name:<input type="text" name="Name" value="Azzam" readonly><br>
+            Age: <input type="number" name="Age" step="1"><br>
+            Email:<input type="email" name="Email"><br>
+            Password:<input type="password" name="Password" required><br><br>
+
+            Hobby:<br>
+            <input type="radio" name="hobbyRadio" value="Coding">Coding<br>
+            <input type="radio" name="hobbyRadio" value="Football">Football<br>
+            <input type="radio" name="hobbyRadio" value="Reading">Reading<br><br>
+
+            <input type="checkbox" id="human" name="humanCheckbox" value="Human">
+            <label for="human">Human</label><br><br>
+
+            <label for="languages">Programming Languages</label>
+            <select id="languages" name="languages">
+                <option value="python">python</option>
+                <option value="javascript">javascript</option>
+                <option value="c#">c#</option>
+            </select><br><br>
+
+            <textarea name="story" rows="10" cols="40" title="Type in your story"></textarea><br><br>
+
+            <button type="submit">Save</button><br>
+            <button type="reset">Reset</button>
+        </fieldset>
+    </form>
+
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+</body>
+
+</html>

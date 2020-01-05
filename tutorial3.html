@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Website</title>
+    <style>
+        .listClass{
+            margin:auto;
+            padding:10px;
+            border:2px solid silver;
+            background-color:gray;
+            width:350px;
+        }
+        .listClass ul{
+            list-style:none;
+        }
+        .listClass li{
+            display:inline;
+        }
+        .listClass a{
+            display:block;
+            text-decoration:none;
+            color:white;
+            text-align:center;
+            margin-bottom:10px;
+            font-size:15px;
+            font-weight:bold;
+
+        }
+        .listClass a:hover:not(.active){
+            background-color:white;
+            color:black;
+        }
+        .listClass a.active {
+            background-color:green;
+            color:white;
+        }
+
+    </style>
+</head>
+<body>
+<div class="listClass">
+   <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Account</a></li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Info</a></li>
+    </ul>
+</div>
+</body>
+</html>
